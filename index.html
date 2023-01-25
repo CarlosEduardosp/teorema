@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="{{url_for('calcular')}}" method="POST" enctype="multipart/form-data" class="centralizar">
+		<div class="form-group ">
+                <h1>Calculadora</h1>
+              <div class="separar">
+			    <label class=" text-dark separar ">Valor do Cateto Oposto:</label><br>
+			<input class="form-control text-center " type="text"   name="valorx"  required>
+            </div>
+
+              <div class="separar">
+			    <label class=" text-dark separar ">Valor do Cateto Adjacente:</label><br>
+			<input class="form-control text-center " type="text"   name="valory"  required>
+            </div>
+        </div>
+		<p></p>
+
+     <div class="btn-group" role="group" aria-label="Basic outlined example">
+       <a href="{{url_for('calcular')}}"><button type="submit" class="btn btn-outline-primary">Calcular</button></a>
+
+     </div>
+	</form>
+<h1>A Hipotenusa é: {{hipotenusa}}</h1>
+</body>
+</html>
